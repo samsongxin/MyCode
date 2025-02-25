@@ -4,5 +4,6 @@ import com.samsong.reward.config.State;
 
 public interface DataStore {
     void save(String customerId, State state);
-    State getCustomerState(String customerId);
+    State getCustomerCurrentState(String customerId);
+    boolean alreadyProcessed(String customerId, State state);
 }

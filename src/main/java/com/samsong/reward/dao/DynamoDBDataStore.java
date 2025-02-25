@@ -9,8 +9,14 @@ public class DynamoDBDataStore implements DataStore{
     }
 
     @Override
-    public State getCustomerState(String customerId) {
+    public State getCustomerCurrentState(String customerId) {
         //TODO implement
         return null;
+    }
+
+    @Override
+    public boolean alreadyProcessed(String customerId, State state) {
+        //TODO implement
+        return false;
     }
 }
