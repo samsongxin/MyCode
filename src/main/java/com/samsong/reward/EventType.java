@@ -1,0 +1,10 @@
+package com.samsong.reward;
+
+public enum EventType {
+	QUALIFIED,
+	ORDER_PLACED,
+	ORDER_SHIPPED,
+	BUDGET_RESERVED,
+	REWARD_GRANTED,
+	CUSTOMER_NOTIFIED
+}
