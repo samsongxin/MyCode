@@ -20,7 +20,7 @@ public class InMemoryDataStore implements DataStore{
 
     @Override
     public State getCustomerCurrentState(String customerId) {
-        return inMemoryDB.get(customerId).getLast();
+       return inMemoryDB.get(customerId).getLast();
     }
 
     @Override
