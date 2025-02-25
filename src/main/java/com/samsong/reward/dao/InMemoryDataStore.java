@@ -20,11 +20,15 @@ public class InMemoryDataStore implements DataStore{
 
     @Override
     public State getCustomerCurrentState(String customerId) {
-       return inMemoryDB.get(customerId).getLast();
+        if(!inMemoryDB.containsKey(customerId)){
+            return null;
+        }else{
+            return inMemoryDB.get(customerId).getLast();
+        }
     }
 
     @Override
     public boolean alreadyProcessed(String customerId, State state) {
-        return inMemoryDB.get(customerId).contains(state);
+        return inMemoryDB.containsKey(customerId) && inMemoryDB.get(customerId).contains(state);
     }
 }

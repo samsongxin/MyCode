@@ -9,12 +9,14 @@ public class OrderPlacedProcessor implements EventProcessor{
     }
 
     @Override
+    public State getStartState() {
+        return State.ORDER_PLACED;
+    }
+
+    @Override
     public State getEndState() {
         return State.BUDGET_RESERVED;
     }
 
-    @Override
-    public State getStartState() {
-        return State.ORDER_PLACED;
-    }
+
 }
