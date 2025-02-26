@@ -3,13 +3,20 @@ package com.samsong.reward.processor;
 import com.samsong.reward.WorkflowEngine;
 import com.samsong.reward.config.State;
 import com.samsong.reward.dao.DataStoreFactory;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LandingPageVisitProcessorTest {
-    final private LandingPageVisitProcessor target = new LandingPageVisitProcessor();
+    private LandingPageVisitProcessor target;
     final private String CUSTOMER_ID = "customer1";
+
+    @BeforeEach
+    void init(){
+        target = new LandingPageVisitProcessor();
+    }
 
     @Test
     public void processTest() {

@@ -2,21 +2,21 @@ package com.samsong.reward.dao;
 
 import com.samsong.reward.config.State;
 
-public class RDPDataStore implements DataStore{
+public class AWSRDPDataStore implements DataStore{
     @Override
     public void save(String customerId, State state) {
         //TODO implement
+        throw new UnsupportedOperationException("This method needs to be implemented");
     }
 
     @Override
     public State getCustomerCurrentState(String customerId) {
         //TODO implement
-        return null;
+        throw new UnsupportedOperationException("This method needs to be implemented");
     }
 
     @Override
     public boolean alreadyProcessed(String customerId, State state) {
-        //TODO implement
-        return false;
+        throw new UnsupportedOperationException("This method needs to be implemented");
     }
 }

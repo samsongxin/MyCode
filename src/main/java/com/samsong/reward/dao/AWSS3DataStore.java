@@ -2,7 +2,7 @@ package com.samsong.reward.dao;
 
 import com.samsong.reward.config.State;
 
-public class DynamoDBDataStore implements DataStore{
+public class AWSS3DataStore implements DataStore{
     @Override
     public void save(String customerId, State state) {
         //TODO implement
@@ -17,7 +17,6 @@ public class DynamoDBDataStore implements DataStore{
 
     @Override
     public boolean alreadyProcessed(String customerId, State state) {
-        //TODO implement
         throw new UnsupportedOperationException("This method needs to be implemented");
     }
 }

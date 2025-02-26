@@ -2,14 +2,20 @@ package com.samsong.reward.processor;
 
 import com.samsong.reward.config.State;
 import com.samsong.reward.dao.DataStoreFactory;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OrderPlacedProcessorTest {
-    final private OrderPlacedProcessor target = new OrderPlacedProcessor();
+    private OrderPlacedProcessor target;
     final private String CUSTOMER_ID = "customer3";
+
+    @BeforeEach
+    void init(){
+        target = new OrderPlacedProcessor();
+    }
 
     @Test
     public void processTest() {
