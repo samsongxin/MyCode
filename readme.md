@@ -1,9 +1,17 @@
-A configurable customer reward workflow.
+Implement a configurable customer reward workflow.
 
-When users take actions, certain events will be generated, which will be processed and put user in different workflow state.
+When users take action, certain events will be generated, which will be processed and put the user in a different workflow state.
+# Work flow
+- customer becomes eligible for rewards after visiting the landing page
+- reserve budget once a customer makes a valid purchase.
+- Grant a reward to the customer when the order is shipped
+- send the customer a notification once the reward is granted.
 
 # Requirements:
-- the workflow should be driven by configurations rater than hard-coded
+- implement in Java
+- use Maven as the build tool
+- with a decent unit test coverage, focus on business logic.
+- the workflow should be driven by configurations rather than hard-coded
 - each event processing should be idempotent (only process once)
-- create a DataStore interface, implement an in memory data store for testing purpose, create stub classes for DynamoDB, AWS RDP database and AWS S3.
+- create a DataStore interface, implement an in-memory data store for testing purposes, and create stub classes for DynamoDB, AWS RDP database, and AWS S3.
 - implement unit tests with Junit 5
