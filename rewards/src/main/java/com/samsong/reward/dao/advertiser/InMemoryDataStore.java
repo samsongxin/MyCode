@@ -16,7 +16,6 @@ public class InMemoryDataStore implements DataStore{
 
     @Override
     public Set<Campaign> getCampaigns(Advertiser advertiser) {
-        // TODO code smell, should return empty Set instead of null
-        return inMemoryDB.getOrDefault(advertiser, null);
+        return inMemoryDB.getOrDefault(advertiser, new HashSet<>());
     }
 }

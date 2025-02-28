@@ -1,6 +1,7 @@
 package com.samsong.reward.modules;
 
-//TODO BUG: forgot to also override hashCode method since this object is used as the key in a Hash; refer to com.samsong.reward.dao.advertiser.InMemoryDataStore
+import java.util.Objects;
+
 public class Advertiser {
     private final String id;
     private final String name;
@@ -31,5 +32,10 @@ public class Advertiser {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }

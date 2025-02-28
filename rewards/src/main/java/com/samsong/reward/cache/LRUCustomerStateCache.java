@@ -33,9 +33,8 @@ public class LRUCustomerStateCache extends LinkedHashMap<String, List<State>> im
         return size();
     }
 
-    //TODO: BUG: potential memory leak, should implement this method
-//    @Override
-//    protected boolean removeEldestEntry(Map.Entry<String, List<State>> eldest) {
-//        return size() > capacity;
-//    }
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<String, List<State>> eldest) {
+        return size() > capacity;
+    }
 }

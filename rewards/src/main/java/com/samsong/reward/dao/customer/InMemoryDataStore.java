@@ -34,7 +34,6 @@ public class InMemoryDataStore implements DataStore{
 
     @Override
     public void purgeCustomerData(String customerId) {
-        //TODO: BUG: potential memory leakage, should remove customerId from inMemoryDB
-        inMemoryDB.get(customerId).clear();
+        inMemoryDB.remove(customerId);
     }
 }
