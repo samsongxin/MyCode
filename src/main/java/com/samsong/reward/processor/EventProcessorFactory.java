@@ -4,11 +4,14 @@ import com.samsong.reward.config.EventType;
 
 public class EventProcessorFactory {
     public static EventProcessor getProcessor(EventType eventType){
+        EventProcessor eventProcessor;
         switch (eventType){
-            case LANDING_PAGE_VISIT: return new LandingPageVisitProcessor();
-            case ORDER_PLACED: return new OrderPlacedProcessor();
-            case ORDER_SHIPPED: return new OrderShippedProcessor();
+            // TODO: BUG: missing break statement
+            case LANDING_PAGE_VISIT: eventProcessor = new LandingPageVisitProcessor();
+            case ORDER_PLACED: eventProcessor = new OrderPlacedProcessor(); break;
+            case ORDER_SHIPPED: eventProcessor = new OrderShippedProcessor(); break;
             default: throw new IllegalArgumentException("Unknown eventType="+ eventType);
         }
+        return eventProcessor;
     }
 }
