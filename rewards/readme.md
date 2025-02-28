@@ -16,3 +16,6 @@ When customers take action, certain events will be generated, which will be proc
 - the workflow should be driven by configurations rather than hard-coded (avoid massive if-else statements)
 - each event processing should be idempotent (only process once)
 - create a DataStore interface, implement an in-memory data store for testing purposes, and create stub classes for DynamoDB, AWS RDP database, and AWS S3.
+
+# To compile rewards module:
+- mvn clean install
