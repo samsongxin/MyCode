@@ -1,8 +1,6 @@
 package com.samsong.reward.processor;
 
-import com.samsong.reward.WorkflowEngine;
 import com.samsong.reward.config.State;
-import com.samsong.reward.dao.DataStoreFactory;
 
 public class LandingPageVisitProcessor implements EventProcessor{
     @Override
