@@ -1,7 +1,7 @@
 package com.samsong.reward.processor;
 
 import com.samsong.reward.config.State;
-import com.samsong.reward.dao.DataStoreFactory;
+import com.samsong.reward.dao.customer.DataStoreFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

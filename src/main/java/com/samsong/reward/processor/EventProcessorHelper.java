@@ -2,7 +2,7 @@ package com.samsong.reward.processor;
 
 import com.samsong.reward.WorkflowEngine;
 import com.samsong.reward.config.State;
-import com.samsong.reward.dao.DataStoreFactory;
+import com.samsong.reward.dao.customer.DataStoreFactory;
 
 public class EventProcessorHelper {
 
